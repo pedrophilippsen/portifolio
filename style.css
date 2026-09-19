@@ -1,0 +1,796 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: arial, sans-serif;
+}
+.nome-destaque {
+    color: #60a5fa;
+}
+
+header{
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111827;
+}
+
+header h1{
+    color: white;
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 16px;
+
+    position:relative;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color: #60a5fa;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #60a5fa;
+
+    transition: 0.3s;
+}
+
+nav a :haver::after {
+    width: 100%;
+}
+
+section {
+    min-height: 70vh;
+    padding: 80px 10%;
+}
+
+#inicio{
+    background:
+    radial-gradient(circle at 85% 20%, rgba(37, 99, 235, 0.12), transparent 25%),
+    radial-gradient( circle at 15% 80%, rgba(30, 64, 175, 0.10), transparent 25%),
+    #080b14;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+    padding-right: 40%;
+}
+
+#inicio h2{
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+#inicio p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin-bottom: 10px;
+}
+
+#sobre {
+    background-color: #101522;
+    color: #f1f5f9;
+}
+
+#sobre h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #60a5fa;
+}
+
+#sobre p {
+    max-width: 750px;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #cbd5e1;
+}
+
+#objetivos {
+    background-color: #080b14;
+    color: #f1f5f9;
+}
+
+#objetivos h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #60a5fa;
+}
+
+#objetivos p {
+    max-width: 750px;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color:#cbd5e1;
+}
+
+#habilidades {
+    background-color: #101522;
+    color: #f1f5f9;
+}
+
+#habilidades h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #60a5fa;
+}
+
+#habilidades ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#habilidades li {
+    background-color: #172033;
+    color: #cbd5e1;
+
+    width: 220px;
+    padding: 20px;
+
+    border: 1px solid #263653;
+    border-radius: 12px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition:0.3s;
+}
+
+#habilidades li:hover {
+    transform:  translateY(-5px);
+    border-color: #60a5fa;
+    box-shadow: 0 8px 20px rgba(96, 165, 250, 0.15);
+}
+
+#habilidades li strong {
+    display: block;
+    color: #60a5fa;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+#habilidades li p {
+    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+#contato {
+    background-color: #080b14;
+    color: #f1f5f9;
+    text-align: center;
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contato h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #60a5fa;
+}
+
+#contato p {
+    font-size: 18px;
+    margin-bottom: 35px;
+    color: #94a3b8;
+}
+
+.contatos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    flex-wrap: wrap;
+}
+
+.contatos a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 65PX;
+    height: 65PX;
+    margin: 0;
+
+    color: #cbd5e1;
+    background-color: #101522;
+
+    border: 1PX solid #263653;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 26px;
+
+    transition: 0.3s;
+}
+
+.contatos a:hover {
+    color: #60a5fa;
+    border-color: #60a5fa;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(96, 165, 250, 0.18);
+}
+
+footer{
+    background-color: #05070d;
+    color: #64748b;
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #172033;
+}
+
+footer p {
+    font-size: 14px;
+}
+/* 
+#inicio h2{
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+#inicio h2::first-line {
+    color: #60a5fa;
+}
+
+#inicio p;:first-of-type {
+    font-size: 22px;                               modelo n ideal
+    font-weight: bold;
+}
+
+#inicio::after {
+    content:"Entre em contato";
+    display: inline-block;
+    width: fit-content;
+
+    margin-top: 25px;
+    padding: 12px 25px;
+
+    background-color: #60a5fa;
+    color: #111827;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+} */
+ 
+.botao {
+    display: inline-block;
+    width: fit-content;
+
+    margin-top: 25px;
+    padding: 12px 25px;
+
+    background-color: #60a5fa;
+    color: #111827;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: translate(-3px);
+    box-shadow:
+     0 8px 20px rgba (96, 165, 250, 0.25),
+    0 0 15px rgba(96, 165, 250, 0.15)
+}
+
+body {
+    background-color: #080b14;
+    color: #f1f5f9;
+}
+
+#inicio {
+    position: relative;
+    overflow: hidden;
+}
+
+#inicio::before {
+    content: "";
+    position: absolute;
+
+    width: 2px;
+    height: 2px;
+
+    background-color: white;
+    border-radius: 50%;
+
+    top: 15%;
+    left: 10%;
+
+    box-shadow:
+    80px 30px white,
+    150px 100px white,
+    230px 50px white,
+    310px 160px white,
+    390px 80px white,
+    470px 210px white,
+    550px 40px white,
+    630px 130px white,
+    710px 70px white,
+    790px 190px white,
+    870px 100px white,
+    950px 230px white,
+    1030px 50px white,
+    1110px 160px white,
+    1200px 90px white,
+    1300px 210px white,
+    1400px 60px white,
+    200px 300px white,
+    450px 350px white,
+    700px 300px white,
+    950px 350px white;
+
+    /* 
+    120px 40px white,
+    250px 120px white,
+    400px 60px white,
+    550px 180px white,
+    700px 80px white,
+    850px 220px white,
+    950px 40px white,
+    300px 300px white,
+    600px 350px white;
+    */
+
+    opacity: 0.55;
+}
+
+#inicio::after {
+    content: "";
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    right: -100px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: radial-Gradient(
+        circle,
+        rgba(96, 165, 250, 0.18),
+        rgba(96, 165, 250, 0.05) 40%,
+        transparent 70% );
+
+        border-radius: 50%;
+        pointer-events:none;
+}
+
+.elemento-espacial {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+
+    width: 280px;
+    height: 280px;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elemento-espacial::before {
+    content: "";
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(96,165,250,0.18),
+        rgba(30,58,95,0.10) 40%,
+        transparent 70%
+    );
+
+    filter: blur(30px);
+    opacity: 0.7;
+
+    z-index: 0;
+
+    animation: nebulosa 8s ease-in-out infinite;
+}
+
+@keyframes nebulosa {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 0.9;
+    }
+}
+
+.planeta {
+    position: relative;
+
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle at 32% 30%,
+        #64748b 0%
+        #334155 20%,
+        #0f172a 55%,
+        #020617 100%
+    );
+
+    box-shadow:
+    0 0 30px rgba(96, 165, 250, 0.15),
+    inset -20px -10px 30px rgba(0, 0, 0, 0.7);
+
+    z-index: 2
+}
+
+.luz-planeta {
+    position: absolute;
+
+    width: 45px;
+    height: 140px;
+
+    background: rgba(148, 163, 184, 0.12);
+
+    border-radius: 50%;
+
+    top: -10px;
+    left: -20px;
+
+    filter: blur(25deg);
+
+    transform: rotate(25deg);
+
+    animation: luzGirando 8s ease-in-out infinite;
+}
+
+@keyframes luzGirando {
+    0% {
+        left: -30px;
+        opacity: 0.2;
+    }
+
+    50% {
+        left: 45px;
+        opacity: 0.5;
+    }
+
+    100% {
+        left: 105px;
+        opacity: 0.2;
+    }
+}
+
+.planeta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 175px;
+    height: 55px;
+
+    border: 1px solid rgba(96, 165, 250, 0.45);
+
+    border-radius: 50%;
+
+    left: -28px;
+    top:32px;
+
+    transform: rotate(-20deg);
+}
+ .planeta::after {
+    content: "";
+
+    position: absolute;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background: #64748b;
+
+    right: -55px;
+    top: 5px;
+
+    box-shadow: 0 0 10px rgba(148, 163, 184, 0.25);
+ }
+
+.orbita {
+    position: absolute;
+
+    width: 220px;
+    height: 70px;
+
+    border: 1px solid rgba(96, 165, 250, 0.35);
+
+    border-radius: 50%;
+
+    transform: rotate(-20deg);
+
+    animation: girar 12s linear infinite;
+
+    z-index: 1;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(-20deg);
+    }
+    to {
+        transform:  rotate(340deg);
+    }
+}
+
+#inicio h2,
+#inicio p,
+#inicio .botao {
+    animation: aparecer 1s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#sobre h2,
+#objetivos h2,
+#habilidades h2 {
+    position: relative;
+    display: inline-block;
+}
+
+#sobre h2::after,
+#objetivos h2::after,
+#habilidades h2::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 2px;
+
+    margin-top: 8px;
+
+    background-color: #60a5fa;
+}
+
+section {
+    border-bottom:  1px solid rgba(96, 165, 250, 0.08);
+}
+
+section p {
+    color: #cbd5e1;
+}
+
+#sobre h2::after,
+#objetivos h2::after,
+#habilidades h2::after {
+    box-shadow: 0 0 8px rgba(96, 165, 250, 0.5);
+}
+
+.estrela-cadente {
+    position: absolute;
+
+    width: 90px;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(96,165,250,0.3),
+        #ffffff
+    );
+
+    border-radius: 50%;
+    opacity: 0;
+
+    transform: rotate(-35deg);
+
+    animation: cair 5s linear infinite;
+}
+
+.estrela-1 {
+    top: 10%;
+    left: 55%;
+}
+
+.estrela-2 {
+    top: 25px;
+    left: 75px;
+
+    animation-delay: 2.5s;
+}
+
+@keyframes cair {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) rotate(35deg);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 0.8;
+        transform: translate(180px,180px) rotate(35deg);
+    }
+
+    55% {
+        opacity: 0;
+        transform: translate(220px,220px) rotate(35deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(220px,220px) rotate(35deg);
+    }
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 18px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    section {
+        min-height: auto;
+        padding: 70px 25px;
+    }
+
+    #inicio {
+        min-height: 90vh;
+        padding: 80px 25px;
+        padding-right: 25px;
+        text-align: left;
+    }
+
+    #inicio h2 {
+        font-size: 36px;
+    }
+
+    #inicio p:first-of-type {
+        font-size: 19px;
+    }
+
+    #inicio p {
+        font-size: 16px;
+    }
+
+    .elemento-espacial {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 220px;
+        height: 220px;
+        margin: 50px auto 0;
+        transform: none;
+    }
+
+    .planeta {
+        width: 100px;
+        height: 100px;
+    }
+
+    .planeta::before {
+        width: 150px;
+        height: 50px;
+        left: -25px;
+        top: 25px;
+    }
+
+    .planeta::after {
+        width: 25px;
+        height: 25px;
+        right: -48px;
+    }
+
+    .orbita {
+        width: 190px;
+        height: 60px;
+    }
+
+    #sobre h2,
+    #objetivos h2,
+    #habilidades h2,
+    #contato h2 {
+        font-size: 28px;
+    }
+
+    #sobre p,
+    #objetivos p {
+        font-size: 16px;
+    }
+
+    #habilidades ul {
+        flex-direction: column;
+    }
+
+    #habilidades li {
+        width: 100%;
+    }
+
+    .contatos {
+        gap: 20px;
+    }
+
+    .contatos a {
+        width: 58px;
+        height: 58px;
+        font-size: 23px;
+    }
+}
